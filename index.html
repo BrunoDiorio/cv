@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Curriculum Vitae - Bruno Diorio</title>
+	<meta content="Curriculo de desenvolvedor fullstack" name="Description">
+	<meta itemprop="name" content="Bruno Diorio">
+	<meta property="og:title" content="Bruno Diorio">
+	<meta property="og:site_name" content="Bruno Diorio">
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:url" content="http://brunodiorio.com.br/">
+	<meta itemprop="description" content="Bruno Diorio Andrade Affonso Curriculo Desenvolvedor Fullstack">
+	<meta property="og:description" content="Bruno Diorio Andrade Affonso Currículo Desenvolvedor Fullstack">
+
+	<meta itemprop="image" content="http://brunodiorio.com.br/img/mug-hot-solid.png">
+	<meta property="og:image" content="http://brunodiorio.com.br/img/mug-hot-solid.png">
+
+
+	<link href="https://s3-sa-east-1.amazonaws.com/brunodiorio.com.br/img/mug-hot-solid.png" rel="shortcut icon">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+		crossorigin="anonymous">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151179762-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-151179762-1');
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script>
+		const calCurrJobTime = {
+			beginDate: new Date('2020-03-01'),
+			curDate: new Date(),
+			difDate: null,
+
+			initDataDif: function () {
+				this.dataDif = new Date(this.curDate.getTime() - this.beginDate.getTime());
+			},
+
+			dateDiffYears: function () {
+				return this.dataDif.getUTCFullYear() - 1970;
+			},
+
+			dateDiffMonths: function () {
+				return this.dataDif.getUTCMonth();
+			},
+
+			calCurrJobTime: function () {
+				this.initDataDif();
+				var months = this.dateDiffMonths();
+				var years = this.dateDiffYears();
+
+				var retVal = '(';
+
+				if (years > 1) {
+					retVal += years + ' anos';
+
+				} else if (years > 0) {
+					retVal += years + ' ano';
+
+				}
+
+				if (years > 0 && months > 0) {
+					retVal += ' e ';
+				}
+
+				if (months > 1) {
+					retVal += months + ' meses';
+
+				} else if (months == 1) {
+					retVal += months + ' mês';
+
+				}
+				retVal += ')';
+
+				document.getElementById('currentJob').innerHTML = retVal;
+			}
+
+		}
+
+
+		$(function () {
+			calCurrJobTime.calCurrJobTime();
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container-fluid mb-5">
+
+		<div class="row justify-content-center d-print-inline">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 m-3 shadow-lg d-print-inline">
+
+				<div class="row text-white bg-dark pt-3">
+					<div class="col-12 col-sm-12 ">
+						<h2>Bruno Diorio Andrade Affonso</h2>
+					</div>
+					<div class="col-12">
+						<h5>Desenvolvedor Java</h5>
+					</div>
+				</div>
+				<div class="row text-muted">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-7 pt-4">
+						<p class="text-justify">
+							Profissional atuando na área de TI a mais de <b>10 anos</b> com experiência nos campos de
+							infraestrutura,
+							redes e desenvolvimento. Apto a atuar no <b>desenvolvimento de projetos</b> contribuindo com
+							as diretrizes
+							de arquitetura, levantamento de requisitos, implementação e desenvolvimento das soluções
+							adequadas
+							às necessidades do projeto.
+						</p>
+						<section>
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>Experiência</h4>
+									<hr />
+								</div>
+							</div>
+
+							<div class="row mb-5">
+								<div class="col-2">
+									2020-03 à Presente Data<div id="currentJob" class="font-italic"></div>
+								</div>
+								<div class="col-10">
+									<div class="row">
+										<div class="col-12 font-weight-bold lead">
+											Desenvolvedor Java Senior
+										</div>
+										<div class="col-12 font-italic">
+											FinTech RecargaPay Instituição de Pagamentos LTDA
+										</div>
+										<div class="col-12 pt-2">
+											<h6>App RecargaPay</h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify">
+													<div>Implementação de novas funcionalidade, Melhoria contínua do backend.</div>
+													<div>Desenvolvimento de soluções focadas em microserviços</div>
+													<div>RESTful services solutions</div>
+													<div>Cache management</div>
+												</li>
+												<li class="list-group-item border-0 text-justify mb-3">
+													<h6 class="d-inline">Tecnologias Usadas:</h6> Java 11, Spring Boot,
+													JPA, PostgreSQL, AWS, Gradle, Maven, Redis, RabbitMQ.
+												</li>
+											</ul>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+
+							<div class="row mb-5">
+								<div class="col-2">
+									2018-04 à 2020-02<div class="font-italic">(1 ano e 10 meses)</div>
+								</div>
+								<div class="col-10">
+									<div class="row">
+										<div class="col-12 font-weight-bold lead">
+											Desenvolvedor Java Pleno
+										</div>
+										<div class="col-12 font-italic">
+											MJV Innovation and Technology
+										</div>
+										<div class="col-12 pt-2">
+											<h6>Projeto PCBS-Novamed</h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify">
+													Projeto com o foco na melhoria do agendamento on-line e
+													implementação de
+													novos modulos administrativos para a gestão dos
+													hospitais da rede <q>Novamed</q>.
+												</li>
+												<li class="list-group-item border-0 text-justify mb-3">
+													<h6 class="d-inline">Tecnologias Usadas:</h6> Java EE 7, Spring MVC,
+													JSP, JDBC, DB2, Oracle DB, IBM WebSphere 8.5, IBM Liberty, JSP,
+													Bootstrap,
+													jQuery, JS, MAVEN.
+												</li>
+											</ul>
+										</div>
+										<div class="col-12">
+											<h6>Projeto SIBS-DiagnosticoCadastral</h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify">
+													Implementação de um portal para cadastro de regras, import de
+													pacotes xml, e envio
+													de relatórios por email para gestores.
+												</li>
+												<li class="list-group-item border-0 text-justify mb-3">
+													<h6 class="d-inline">Tecnologias Usadas:</h6> Java EE 7, Struts2,
+													Spring CORE, JDBC, iReport, JSP, DB2, IBM WebSphere 8.5, IBM
+													Liberty, JSP, Bootstrap,
+													jQuery, JS, MAVEN.
+												</li>
+											</ul>
+										</div>
+										<div class="col-12">
+											<h6>Projeto SGRR-RankingReferenciado</h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify">
+													Automatização do processo de ranqueamento dos médicos referenciados
+													na rede Bradesco Saúde.
+												</li>
+												<li class="list-group-item border-0 text-justify mb-3">
+													<h6 class="d-inline">Tecnologias Usadas:</h6> Java EE 7, Struts2,
+													Spring CORE, JSP, JDBC, IBM CICS, DB2, IBM WebSphere 8.5, JSP,
+													Bootstrap,
+													jQuery, JS, MAVEN.
+												</li>
+											</ul>
+										</div>
+										<div class="col-12">
+											<h6>Projeto REBN</h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify">
+													Consulta ao portifólio de produtos de segudos dos clientes Bradesco
+													Seguros.
+												</li>
+												<li class="list-group-item border-0 text-justify mb-3">
+													<h6 class="d-inline">Tecnologias Usadas:</h6> Java EE 7, Struts2,
+													Spring CORE, JDBC, JSP, IBM CICS,
+													DB2, IBM WebSphere 8.5, JSP, Bootstrap,
+													jQuery, JS, MAVEN.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row mb-5">
+								<div class="col-2">
+									2017-04 à 2018-04 <div class="font-italic">(1 ano)</div>
+								</div>
+								<div class="col-10">
+									<div class="row">
+										<div class="col-12 font-weight-bold lead">
+											Desenvolvedor Java Pleno
+										</div>
+										<div class="col-12 font-italic">
+											Datagrupo system solutions
+										</div>
+										<div class="col-12 pt-2">
+											<h6>Projeto Ombrello</h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify">
+													Sistema de gerenciamento de planos de seguros, com o foco
+													em indicações de plenos pelos usuários através das redes sociais.
+												</li>
+												<li class="list-group-item border-0 text-justify mb-3">
+													<h6 class="d-inline">Tecnologias Usadas:</h6> Java EE 8, Maven,
+													Tomcat 8.5, JPA, Hibernate,
+													Spring framework, JSF 2.2, Componentes próprios, Primefaces,
+													Bootstrap, HTML 5, CSS 3, Javascript, Jquery, ajax, Google
+													Analytics, Bitbucket,
+													Redmine.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="row mb-5">
+								<div class="col-2">
+									2015-09 à 2017-04 <div class="font-italic">(1 ano e 7 meses)</div>
+								</div>
+								<div class="col-10">
+									<div class="row">
+										<div class="col-12 font-weight-bold lead">
+											Desenvolvimento Java Junior
+										</div>
+										<div class="col-12 font-italic">
+											Sênior Solution
+										</div>
+										<div class="col-12 pt-2">
+											<h6>Projeto Drive net</h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify">
+													Sistem de gestão de ativos mobiliários,
+												</li>
+												<li class="list-group-item border-0 text-justify mb-3">
+													<h6 class="d-inline">Tecnologias Usadas: </h6>Java EE 7, Servlet,
+													JSP, JDBC, SqlServer, Oracle
+													iReport, Componentes próprios, Javascript, ajax, Tomcat, Jboss,
+													WebSphere, ProjectBuilder
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="row mb-5">
+								<div class="col-2">
+									2014-05 à 2015-09 <div class="font-italic">(1 ano e 4 meses)</div>
+								</div>
+								<div class="col-10">
+									<div class="row">
+										<div class="col-12 font-weight-bold lead">
+											Técnico de Telecomunicações
+										</div>
+										<div class="col-12 font-italic">
+											Procisa do Brasil
+										</div>
+										<div class="col-12 pt-2">
+											<h6></h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify mb-3">
+													Realização de Testes (Wise, Smartclass,FTS 5800 e outros).
+													Gerencia Datacom, Tellabs.
+													Testes de camada 2, 3 e 4.
+													DWDM, SDH, PDH.
+													Suporte e atendimento a técnicos externos e internos.
+													Atendimento externo a outros ambientes (Sala de
+													Provedores/Telefonia/Rádio/Internacional).
+													Testes em todo Backbone Embratel.
+													Protocolos TCP/IP, HTTP(S), FTP.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row mb-5">
+								<div class="col-2">
+									2011-03 à 2014-05 <div class="font-italic">(3 anos e 2 meses)</div>
+								</div>
+								<div class="col-10">
+									<div class="row">
+										<div class="col-12 font-weight-bold lead">
+											Supervisor Técnico de Telecomunicações
+										</div>
+										<div class="col-12 font-italic">
+											Líder Telecom
+										</div>
+										<div class="col-12 pt-2">
+											<h6></h6>
+											<ul class="list-group">
+												<li class="list-group-item border-0 text-justify mb-3">
+													Configuração de Routers e Switches CISCO.
+													Rotina de testes em redes Metro e E1.
+													Gestão das equipes técnicas do setor de ativação.
+													Suporte as atividades externas
+													Protocolos TCP/IP.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</section>
+
+						<section class="pb-5">
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>Formação</h4>
+									<hr />
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-2">
+									2004
+								</div>
+								<div class="col-10">
+									Ensino Médio, <div class="font-italic d-inline">Rede MV1</div>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-2">
+									2013
+								</div>
+								<div class="col-10">
+									Técnico em Informática, <div class="font-italic d-inline">Senai</div>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-2">
+									2014
+								</div>
+								<div class="col-10">
+									Java Web Developer, <div class="font-italic d-inline">COTI informática</div>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-2">
+									2018
+								</div>
+								<div class="col-10">
+									Bacharel em Engenharia da Computação, <div class="font-italic d-inline">UVA</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-5 bg-light pb-5">
+						<section>
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>Dados Pessoais</h4>
+									<hr />
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-4">
+									Endereço
+								</div>
+								<div class="col-8">
+									<div class="row">
+										<div class="col-12">Rua Conselheiro Zacarias, 80</div>
+										<div class="col-12">Gamboa, RJ 20220-470</div>
+									</div>
+								</div>
+								<div class="col-4">
+									Nascimento
+								</div>
+								<div class="col-8">
+									29/07/1987
+								</div>
+								<div class="col-4">
+									Celular
+								</div>
+								<div class="col-8">
+									(21) 98130-7371
+								</div>
+								<div class="col-4 b">
+									E-mail
+								</div>
+								<div class="col-8">
+									bruno.affono@live.com
+								</div>
+								<div class="col-4 b">
+									Relacionamento
+								</div>
+								<div class="col-8">
+									Casado
+								</div>
+								<div class="col-4 b">
+									Filhos
+								</div>
+								<div class="col-8">
+									Não
+								</div>
+								<div class="col-4 b">
+									Nacionalidade
+								</div>
+								<div class="col-8">
+									Brasileiro
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>Linguagens</h4>
+									<hr />
+								</div>
+							</div>
+							<div class="row justify-content-start mb-2">
+								<div class="col-6">Java</div>
+								<div class="col-6">Spring</div>
+								<div class="col-6">Javascript</div>
+								<div class="col-6">Sql</div>
+								<div class="col-6">HTML5</div>
+								<div class="col-6">CSS3</div>
+							</div>
+						</section>
+						<section>
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>Frameworks</h4>
+									<hr />
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">jQuery</div>
+								<div class="col-6">JPA</div>
+								<div class="col-6">Hibernate</div>
+								<div class="col-6">Spring Core</div>
+								<div class="col-6">Spring MVC</div>
+								<div class="col-6">Spring Rest</div>
+								<div class="col-6">jUnit</div>
+								<div class="col-6">Mockito</div>
+								<div class="col-6">JSF 2</div>
+								<div class="col-6">Servlet</div>
+								<div class="col-6">JSTL</div>
+								<div class="col-6">JSP</div>
+								<div class="col-6">Primefaces</div>
+								<div class="col-6">Struts2</div>
+								<div class="col-6">Bootstrap</div>
+								<div class="col-6">Maven</div>
+							</div>
+						</section>
+						<section>
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>SGBD e Servidores</h4>
+									<hr />
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">Jenkins</div>
+								<div class="col-6">Tomcat</div>
+								<div class="col-6">Jboss</div>
+								<div class="col-6">Websphere</div>
+								<div class="col-6">Liberty</div>
+								<div class="col-6">PostgreSQL</div>
+								<div class="col-6">MySql</div>
+								<div class="col-6">Oracle</div>
+								<div class="col-6">Sql Server</div>
+								<div class="col-6">DB2</div>
+							</div>
+						</section>
+						<section>
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>Versionamento</h4>
+									<hr />
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">Git</div>
+								<div class="col-6">Svn</div>
+							</div>
+						</section>
+						<section>
+							<div class="row">
+								<div class="col-12 mt-3">
+									<h4>Governança de TI</h4>
+									<hr />
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">Redmine</div>
+								<div class="col-6">Asana</div>
+								<div class="col-6">Trello</div>
+								<div class="col-6">Kanban</div>
+								<div class="col-6">Scrum</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+██╗  ██╗██╗██████╗ ███████╗        ███╗   ███╗███████╗
+██║  ██║██║██╔══██╗██╔════╝        ████╗ ████║██╔════╝
+███████║██║██████╔╝█████╗          ██╔████╔██║█████╗  
+██╔══██║██║██╔══██╗██╔══╝          ██║╚██╔╝██║██╔══╝  
+██║  ██║██║██║  ██║███████╗███████╗██║ ╚═╝ ██║███████╗
+╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝╚══════╝
+-->
+</body>
+
+</html>
